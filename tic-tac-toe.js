@@ -13,5 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
       }
     });
+     squares[i].addEventListener("mouseover", function() {
+      if (squares[i].textContent === "") {
+        squares[i].classList.add("hover");
+      }
+    });
+    squares[i].addEventListener("mouseout", function() {
+      squares[i].classList.remove("hover");
+    });
   }
 });
