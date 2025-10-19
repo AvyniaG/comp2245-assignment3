@@ -1,7 +1,7 @@
-window.onload = function() {
-  var squares = document.querySelectorAll("#board div");
+document.addEventListener("DOMContentLoaded", function() {
+  let squares = document.querySelectorAll("#board div");
 
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].setAttribute("class", "square");
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].classList.add("square");
   }
-};
+});
