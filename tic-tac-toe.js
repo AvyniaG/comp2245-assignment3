@@ -47,4 +47,21 @@ document.addEventListener("DOMContentLoaded", function() {
        });
     });
   }
+      const newGame = document.querySelector(".btn");
+
+  newGame.addEventListener("click", function() {
+
+    for (let i = 0; i < squares.length; i++) {
+      squares[i].textContent = "";
+      squares[i].classList.remove("X", "O");
+    }
+
+    statusDiv.textContent = "Move your mouse over a square and click to play an X or an O.";
+    statusDiv.classList.remove("you-won");
+
+
+    currentPlayer = "X";
+    gameOver = false;
+  });
+
 });
